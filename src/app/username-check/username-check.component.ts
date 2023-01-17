@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class UsernameCheckComponent implements OnInit {
   allowNewInput: boolean = false;
   inputText = '';
-  inputCreateStatus = 'Enter text!';
 
   constructor() {}
 
@@ -16,8 +15,8 @@ export class UsernameCheckComponent implements OnInit {
     this.inputText = (<HTMLInputElement>event.target).value;
   }
 
-  onCreateText() {
-    this.inputCreateStatus = this.inputText;
+  onEmptyInput() {
+    this.inputText = '';
   }
 
   ngOnInit(): void {}

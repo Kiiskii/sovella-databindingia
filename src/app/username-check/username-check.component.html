@@ -4,11 +4,11 @@
     <small class="text-muted">using databinding</small>
   </h1>
   <h3>Enter text!</h3>
-  <input type="text" class="form-control" (input)="onUpdateInput($event)" />
+  <input type="text" class="form-control" [(ngModel)]="inputText" />
   <button
     class="btn btn-primary"
     [disabled]="allowNewInput"
-    (click)="onCreateText()"
+    (click)="onEmptyInput()"
   >
     Check
   </button>
