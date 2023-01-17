@@ -3,5 +3,14 @@
     Username Check
     <small class="text-muted">using databinding</small>
   </h1>
+  <h3>Enter text!</h3>
   <input type="text" class="form-control" (input)="onUpdateInput($event)" />
+  <button
+    class="btn btn-primary"
+    [disabled]="allowNewInput"
+    (click)="onCreateText()"
+  >
+    Check
+  </button>
+  <p>{{ inputText }}</p>
 </section>

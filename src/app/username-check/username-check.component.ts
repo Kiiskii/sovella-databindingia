@@ -12,12 +12,12 @@ export class UsernameCheckComponent implements OnInit {
 
   constructor() {}
 
-  onCreateText() {
-    this.inputCreateStatus = this.inputText;
-  }
-
   onUpdateInput(event: Event) {
     this.inputText = (<HTMLInputElement>event.target).value;
+  }
+
+  onCreateText() {
+    this.inputCreateStatus = this.inputText;
   }
 
   ngOnInit(): void {}
