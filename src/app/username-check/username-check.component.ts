@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./username-check.component.css'],
 })
 export class UsernameCheckComponent implements OnInit {
-  allowNewInput: boolean = false;
   inputText = '';
 
-  constructor() {}
+  getDisabled() {
+    return this.inputText ? false : true;
+  }
 
   onUpdateInput(event: Event) {
     this.inputText = (<HTMLInputElement>event.target).value;
